@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    block meta
+    block title
+    link(rel="stylesheet", href="https://cdn.jsdeliver.net/gh/randommonkey/ds.css@1.0.0/dist/ds.css")
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    block css
+  body
+    #wrapper.column
+      nav.column.v-centered
+        .container
+          .line.justify-end
+            img.ds-logo.item-center(src="assets/media/ds.png", alt="")
+      block main
+      footer.column.v-centered
+        .container
+          .line.justify-end
+            p
+              | Síguenos en 
+              a(href="https://es-la.facebook.com/datasketch/" target="_blank" rel="noopener noreferrer"): i.fab.fa-facebook-f
+              a(href="https://twitter.com/datasketch" target="_blank" rel="noopener noreferrer"): i.fab.fa-twitter
+              a(href="https://www.instagram.com/datasketch/" target="_blank" rel="noopener noreferrer"): i.fab.fa-instagram
+    block js
