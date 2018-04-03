@@ -1,0 +1,1 @@
+"use strict";var app=new Vue({el:"#app",data:{articles:[],loading:!0},created:function(){var s=this;Tabletop.init({key:"https://docs.google.com/spreadsheets/d/10VWGypyA2XhR_ENu4Cf9pnZk9rgfrZF2Zp3dHE6G7Fg/edit?usp=sharing",callback:function(a,e){var t=e.sheets("articulos").all();s.articles=t,s.loading=!1}})}});

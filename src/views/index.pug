@@ -10,6 +10,31 @@ block main
   main.fill
     .half-section.column.v-centered.main-banner
       .container
-        h1 Urbano
-        p Visualizaciones callejeras
+        .line.wrap.justify-between.v-centered
+          .content
+            h1 Urbano
+            p Visualizaciones callejeras
+          <iframe width="400" height="225" src="https://www.youtube.com/embed/sMbWiBjh9cs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    .container-smaller.section
+      h2.section-title ¿Qué es Urbano?
+      p.section-text Urbano es la apuesta que Datasketch hace para promover el uso de los datos en espacios urbanos de manera eficaz.
+      p.section-text Este proyecto facilita la interacción y el acercamiento de los ciudadanos con los datos; permitiendo que distintas personas se involucren en el proyecto, ya sea como re-creadores de visualizaciones o como espectadores.
+      p.section-text La iniciativa consiste en entregar a un grupo de ciudadanos kits que contienen diversos materiales (como cintas, hilos, vinilos) junto con muestras de visualizaciones hechas con datos que cuenten diversas problemáticas, la labor de los participantes será recrear en espacios públicos, como calles, parques o plazas, las diferentes visualizaciones.
+      p.section-text El objetivo de este proyecto es potencializar las intervenciones callejeras y públicas como práctica política y educar a las personas en materia de datos. Esta es una mirada desde la investigación-acción-participativa, lo que implica pensar las prácticas a partir de poner el cuerpo en ellas.
+    .container.section
+      #app
+        h2.section-title Artículos relacionados
+        template(v-if="loading")
+          p.line.centered Cargando...
+        template(v-else)
+          ul.post-it-container
+            li.post-it-item(
+              v-for="(article, index) in articles",
+              :key="index",
+            )
+              a.column.v-centered(:href="article.url" target="_blank" rel="nooopener noreferrer"): span {{article.title}}
 
+block js
+  script(src="vendors/tabletop.min.js")
+  script(src="vendors/vue.min.js")
+  script(src="assets/js/index.js")

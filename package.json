@@ -23,5 +23,9 @@
     "gulp-uglifycss": "^1.0.9",
     "gulp-webserver": "^0.9.1",
     "pump": "^3.0.0"
+  },
+  "dependencies": {
+    "tabletop": "^1.5.2",
+    "vue": "^2.5.16"
   }
 }
